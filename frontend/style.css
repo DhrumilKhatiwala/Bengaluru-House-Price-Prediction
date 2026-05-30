@@ -243,12 +243,7 @@ button.loading .loader {
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
-  animation: pulse 2s infinite alternate;
-}
-
-@keyframes pulse {
-  from { box-shadow: 0 0 15px rgba(16, 185, 129, 0.1); }
-  to { box-shadow: 0 0 25px rgba(16, 185, 129, 0.3); }
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
 }
 
 .result-card h3 {
