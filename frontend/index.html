@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bengaluru House Price Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="glass-panel">
+        <div class="header">
+          <h1>Bengaluru House Price Predictor</h1>
+          <p>Get accurate estimates for properties across the city using advanced ML models.</p>
+        </div>
+        
+        <form id="prediction-form">
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="location">Location</label>
+              <input type="text" list="locations-list" id="location" name="location" placeholder="Loading locations..." required autocomplete="off" />
+              <datalist id="locations-list"></datalist>
+            </div>
+
+            <div class="input-group">
+              <label for="area_type">Area Type</label>
+              <select id="area_type" name="area_type" required>
+                <option value="Super built-up Area">Super built-up Area</option>
+                <option value="Built-up Area">Built-up Area</option>
+                <option value="Plot Area">Plot Area</option>
+                <option value="Carpet Area">Carpet Area</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="size">Size (BHK)</label>
+              <select id="size" name="size" required>
+                <option value="" disabled selected>Loading sizes...</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="total_sqft">Total Sqft</label>
+              <input type="number" step="any" min="1" id="total_sqft" name="total_sqft" placeholder="e.g. 1200" required />
+            </div>
+
+            <div class="input-group">
+              <label for="bath">Bathrooms</label>
+              <input type="number" id="bath" name="bath" min="1" max="20" placeholder="2" required />
+            </div>
+
+            <div class="input-group">
+              <label for="balcony">Balcony</label>
+              <input type="number" id="balcony" name="balcony" min="0" max="10" placeholder="1" required />
+            </div>
+
+            <div class="input-group">
+              <label for="availability">Availability</label>
+              <select id="availability" name="availability" required>
+                <option value="" disabled selected>Loading availability...</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="society">Society (Optional)</label>
+              <input type="text" id="society" name="society" placeholder="e.g. GrrvaGr" />
+            </div>
+          </div>
+
+          <button type="submit" id="submit-btn">
+            <span class="btn-text">Predict Price</span>
+            <div class="loader" id="btn-loader"></div>
+          </button>
+        </form>
+
+        <div id="result-container" class="result-hidden">
+          <div class="result-card">
+            <h3>Estimated Price</h3>
+            <div class="price-display">
+              <span class="currency">₹</span>
+              <span id="predicted-price">0</span>
+              <span class="unit">Lakhs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-shape shape-1"></div>
+      <div class="bg-shape shape-2"></div>
+      <div class="bg-shape shape-3"></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
