@@ -17,12 +17,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "data", "model.pkl")
 model = None
 
 import pickle
 
-CSV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "bengaluru_house_prices.csv")
+CSV_PATH = os.path.join(os.path.dirname(__file__), "data", "bengaluru_house_prices.csv")
 unique_options = {
     "locations": [],
     "sizes": [],

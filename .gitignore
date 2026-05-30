@@ -48,5 +48,5 @@ venv.bak/
 Thumbs.db
 
 # Project Specific (Optional - Uncomment if you don't want to push models/datasets)
-# bengaluru_house_prices.csv
-# backend/model.pkl
+backend/data/bengaluru_house_prices.csv
+backend/data/model.pkl
